@@ -7,14 +7,14 @@ html, body {
 	color: rgba(0,0,0,0.8);
 	background: rgba(0,100,0,0.05);
 }
-h1, h2, h3, h4, h5, h6, p, ul {
+h1, h2, h3, h4, h5, h6, p{
 	margin: 0;
 	padding: 0;
 }
 h1 { padding: 15px 0px; text-transform: capitalize; }
 p, div { margin: 5px 0 10px 0; }
 li {
-	list-style: none;
+	/*list-style: none;*/
 }
 a {
 	text-decoration: none;
@@ -39,8 +39,11 @@ a {
 	width: 90%;
 	margin: 0 auto;
 }
+.phpOutput{
+	color: rgba(80, 140, 100, 0.95);
+}
 .phpCode::after {
-	content: "End of PHP.";
+	content: "End of Code.";
 	margin-top: 20px;
 	border-top: 1px solid rgba(0,40,20,0.1);
 }

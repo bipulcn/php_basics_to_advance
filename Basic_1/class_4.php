@@ -9,9 +9,18 @@
   	<div class="container">
 	    <h1>Basic Variables in PHP.</h1>
 	    <p data-label="Note" class="note">You can declare any variable starting with $ . That it $name, $price, $var are all variables.</p>
+      <div class="phpCode">
+<?php
+$code = '<?php
+  $txt = "i-evoke.com";
+  echo "I love $txt!";
+?>';
+echo highlight_string($code);
+?>
+      </div>
       <div class="phpOutput">
         <?php
-          $txt = "W3Schools.com";
+          $txt = "i-evoke.com";
           echo "I love $txt!";
         ?>
       </div>
