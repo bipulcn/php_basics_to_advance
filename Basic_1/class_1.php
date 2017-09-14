@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title></title>
+    <title>Class 1</title>
   </head>
   <body>
     <h1>PHP starts from here.</h1>
