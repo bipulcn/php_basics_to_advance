@@ -7,11 +7,11 @@
   </head>
   <body>
   	<div class="container">
-	    <h1>PHP starts from here.</h1>
+	    <h1>Some basics about PHP</h1>
 	    <div>
 		    <?php
 				echo "hello world";  // basic PHP print line statement.
-				$name = "Your name"; // PHP variable Declaration 
+				$name = "Your name"; // PHP variable Declaration
 				echo "<br>"; // adding html content in PHP print statement.
 				echo $name;
 			?>

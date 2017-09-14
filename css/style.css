@@ -35,3 +35,43 @@ a {
 	padding: 10px 20px;
 	border-radius: 5px;
 }
+.phpCode, .phpOutput {
+	width: 90%;
+	margin: 0 auto;
+}
+.phpCode::after {
+	content: "End of PHP.";
+	margin-top: 20px;
+	border-top: 1px solid rgba(0,40,20,0.1);
+}
+.phpOutput::before {
+	content: "PHP Output:\A";
+	margin-bottom: 20px;
+	border-bottom: 1px solid rgba(0,40,20,0.1);
+}
+.phpOutput::after {
+	content: "END.";
+	margin-top: 20px;
+	border-top: 1px solid rgba(0,40,20,0.1);
+}
+.phpCode::before {
+	content: "PHP code:\A";
+	margin-bottom: 20px;
+	border-bottom: 1px solid rgba(0,40,20,0.1);
+}
+.phpCode::after, .phpCode::before, .phpOutput::before, .phpOutput::after {
+  white-space: pre;
+	display: block;
+  padding: 5px 8px;
+	margin-left: -5%;
+}
+.note:before {
+  content: "Note: ";
+	color: gray;
+	font-weight: 600;
+}
+[data-label]:before {
+  content: attr(data-label) ": ";
+	color: gray;
+	font-weight: 600;
+}

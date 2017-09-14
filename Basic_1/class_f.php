@@ -9,6 +9,12 @@
   	<div class="container">
 	    <h1>Basic Page Structure.</h1>
 	    <p class="note">Note about the learning section.</p>
+      <div class="phpOutput">
+        <?php
+          $txt = "W3Schools.com";
+          echo "I love $txt!";
+        ?>
+      </div>
 	</div>
   </body>
 </html>
