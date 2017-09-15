@@ -50,7 +50,7 @@ $obj = new clsName();
 echo highlight_string($code);
 ?>
       </div>
-      <p>Next try to create function</p>
+      <p>Next try to create function. how much do you know about functions.</p>
 	</div>
 
   </body>
