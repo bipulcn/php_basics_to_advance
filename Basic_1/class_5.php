@@ -44,6 +44,7 @@ $code = '<?php
   echo "It prints only the number <br>".$result;
   $result = $numTxt + $num;
   echo "<br>Php can extract number from string if its at begining of the text<br>".$result;
+  echo "<p>It show some Worning or Notice This are not error. so it will generate the output with worning and notice.</p>";
 ?>';
 echo highlight_string($code);
 ?>
@@ -57,6 +58,7 @@ echo highlight_string($code);
           echo "It prints only the number <br>".$result;
           $result = $numTxt + $num;
           echo "<br>Php can extract number from string if its at begining of the text<br>".$result;
+          echo "<p>It show some Worning or Notice This are not error. so it will generate the output with worning and notice.</p>";
         ?>
       </div>
 	</div>
