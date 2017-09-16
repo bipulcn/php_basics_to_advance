@@ -1,11 +1,6 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <title>Class 7</title>
-    <link rel="stylesheet" type="text/css" href="../css/style.css">
-  </head>
-  <body>
+<?php
+include('../php/getLinks.php');
+?>
   	<div class="container">
 	    <h1>Global and Local Scope.</h1>
 	    <p class="note"> We can access the global variable from the local space. The global keyword is used to access a global variable from within a function. To do this, use the global keyword before the variables (inside the function):</p>
@@ -40,7 +35,7 @@ function myTest() {
 
 myTest();
 echo "<br>Global z changed by the function and reslutl is: ".$z; // outputs 15';
-echo highlight_string($code);
+echo highlight_string($code, true);
 ?>
       </div>
       <p class="note">PHP also stores all global variables in an array called $GLOBALS[index].</p>
@@ -77,7 +72,7 @@ function myTest2() {
 myTest2();
 echo "<br>Global z changed by the function and reslutl is: ".$k; // outputs 15
 echo "<br>Here we havent declare any global variable n but it also can be accessed by Global: ".$n;';
-echo highlight_string($code);
+echo highlight_string($code, true);
 ?>
       </div>
 	</div>

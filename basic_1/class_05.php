@@ -1,11 +1,6 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <title>Class 5 Variables</title>
-    <link rel="stylesheet" type="text/css" href="../css/style.css">
-  </head>
-  <body>
+<?php
+include('../php/getLinks.php');
+?>
   	<div class="container">
 	    <h1>Basic Variables in PHP.</h1>
 	    <p class="note">In PHP, a variable starts with the $ sign, followed by the name of the variable:</p>
@@ -29,7 +24,7 @@ $code = '<?php
   echo "<p>You may notice that we use . to concate a variable with any other strings.<h4>Now</h4>";
   echo "The addition of two number is ".($x+$y);
 ?>';
-echo highlight_string($code);
+echo highlight_string($code, true);
 ?>
       </div>
       <p>Here you may notice that we have added two number one is integer and another is float but result is float. PHP can parse number from any thing. we will check it in next part.</p>
@@ -58,7 +53,7 @@ $code = '<?php
   echo "<br>Php can extract number from string if its at begining of the text<br>".$result;
   echo "<p>It show some Worning or Notice This are not error. so it will generate the output with worning and notice.</p>";
 ?>';
-echo highlight_string($code);
+echo highlight_string($code, true);
 ?>
       </div>
 	</div>

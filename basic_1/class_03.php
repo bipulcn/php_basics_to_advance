@@ -1,11 +1,6 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <title>Class 3</title>
-    <link rel="stylesheet" type="text/css" href="../css/style.css">
-  </head>
-  <body>
+<?php
+include('../php/getLinks.php');
+?>
   	<div class="container">
       <h1>Some basics about PHP</h1>
 		<h5>Most beautiful thing about PHP is that</h5><p class="note">It's not case sensetive on its key works. All keywords (e.g. if, else, while, echo, etc.), classes, functions, and user-defined functions are NOT case-sensitive.</p>
@@ -33,7 +28,7 @@
     echo "My name is " . $NAME . "<br>";
     echo "My Name is " . $NaME . "<br>";
   ?>';
-  echo highlight_string($code);
+  echo highlight_string($code, true);
   ?>
         </div>
 	</div>

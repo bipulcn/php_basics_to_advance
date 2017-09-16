@@ -1,11 +1,6 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <title>Class practice one: starting</title>
-    <link rel="stylesheet" type="text/css" href="../css/style.css">
-  </head>
-  <body>
+<?php
+include('../php/getLinks.php');
+?>
   	<div class="container">
 	    <h1>Object Oriented PHP Begins.</h1>
 	    <p class="note">I know that you already have clear idea about PHP basics: functions, variables, conditionals and loops.</p>

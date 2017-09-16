@@ -78,3 +78,18 @@ a {
 	color: gray;
 	font-weight: 600;
 }
+
+.menu {
+	float: right;
+	background: rgba(255,255,255,0.9);
+}
+
+.menu ul{padding: 10px 5px 0 10px;}
+.menu li {list-style: none}
+.menu li ul {
+	visibility: hidden;
+  	transition: 0.2s 1s; /* delay of 1 seconds on hover off */
+}
+.menu a:hover{
+	background: orange;
+}

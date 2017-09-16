@@ -11,10 +11,9 @@ include('../php/getLinks.php');
       <div class="phpCode">
 <?php
 $code = '';
-echo highlight_string($code);
+echo highlight_string($code, true);
 ?>
       </div>
 	</div>
-
   </body>
 </html>

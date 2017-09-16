@@ -1,11 +1,6 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <title>Class 4</title>
-    <link rel="stylesheet" type="text/css" href="../css/style.css">
-  </head>
-  <body>
+<?php
+include('../php/getLinks.php');
+?>
   	<div class="container">
 	    <h1>Basic Variables in PHP.</h1>
 	    <p data-label="Note" class="note">You can declare any variable starting with $ . That it $name, $price, $var are all variables.</p>
@@ -21,7 +16,7 @@ $code = '<?php
   $txt = "i-evoke.com";
   echo "I love $txt!";
 ?>';
-echo highlight_string($code);
+echo highlight_string($code, true);
 ?>
       </div>
       <h4>Or</h4>
@@ -36,7 +31,7 @@ echo highlight_string($code);
         $code = '<?php
   echo "I love " . $txt . "!";
 ?>';
-        echo highlight_string($code);
+        echo highlight_string($code, true);
         ?>
       </div>
 	</div>

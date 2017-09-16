@@ -15,6 +15,5 @@ echo highlight_string($code);
 ?>
       </div>
 	</div>
-
   </body>
 </html>

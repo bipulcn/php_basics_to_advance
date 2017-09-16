@@ -1,18 +1,13 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <title>Class 2</title>
-    <link rel="stylesheet" type="text/css" href="../css/style.css">
-  </head>
-  <body>
+<?php
+include('../php/getLinks.php');
+?>
   	<div class="container">
 	    <h1>Basic Page Structure.</h1>
 	    <p class="note">Note about the learning section.</p>
       <div class="phpCode">
 <?php
 $code = '';
-echo highlight_string($code);
+echo highlight_string($code, true);
 ?>
       </div>
       <div class="phpOutput">

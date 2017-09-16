@@ -1,11 +1,6 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <title>Class 6 Scope of variables</title>
-    <link rel="stylesheet" type="text/css" href="../css/style.css">
-  </head>
-  <body>
+<?php
+include('../php/getLinks.php');
+?>
   	<div class="container">
 	    <h1>Variable Scope in PHP.</h1>
 	    <p class="note">In PHP, variables can be declared anywhere in the script.
@@ -47,7 +42,7 @@ myTest();
 
 echo "<p>Variable x outside function is: $x</p>";
 ?>';
-echo highlight_string($code);
+echo highlight_string($code, true);
 ?>
       </div>
       <h3>Local Scope</h3>
@@ -80,7 +75,7 @@ myTest2();
 // using x outside the function will generate an error
 echo "<p>Variable x outside function is: $x</p>";
 ?>';
-echo highlight_string($code);
+echo highlight_string($code, true);
 ?>
       </div>
 	</div>
