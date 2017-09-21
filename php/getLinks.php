@@ -29,9 +29,9 @@ function createSubList($addr, $lnk) {
 	echo "</ul>";
 }
 function removeUnimportant($files) {
-	$ary = ['.', '..', '.git','php','css'];
-	foreach ($files as $k => $v) 
-		if (in_array($v, $ary)) 
+	$ary = ['.', '..', '.git','php','css','.DS_Store'];
+	foreach ($files as $k => $v)
+		if (in_array($v, $ary))
 			unset($files[$k]);
 	return $files;
 }
