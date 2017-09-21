@@ -13,10 +13,10 @@
   <style>
   body {
     background: red; /* For browsers that do not support gradients */
-    background: -webkit-linear-gradient(<?php echo $c1.", ".$c2;?>); /* For Safari 5.1 to 6.0 */
-    background: -o-linear-gradient(<?php echo $c1.", ".$c2;?>); /* For Opera 11.1 to 12.0 */
-    background: -moz-linear-gradient(<?php echo $c1.", ".$c2;?>); /* For Firefox 3.6 to 15 */
-    background: linear-gradient(<?php echo $c1.", ".$c2;?>);
+    background: -webkit-radial-gradient(<?php echo "skyblue, ".$c2;?>); /* For Safari 5.1 to 6.0 */
+    background: -o-radial-gradient(<?php echo "skyblue, ".$c2;?>); /* For Opera 11.1 to 12.0 */
+    background: -moz-radial-gradient(<?php echo "skyblue, ".$c2;?>); /* For Firefox 3.6 to 15 */
+    background: radial-gradient(<?php echo "skyblue, ".$c2;?>);
     height: 100vh;
     /*background: <?php echo $color;?>;*/
   }
