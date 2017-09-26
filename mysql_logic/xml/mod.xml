@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<epbllesson>
+  <header>
+	<subject>তথ্য ও যোগাযোগ প্রযুক্তি</subject>
+	<author>
+	  <list>one</list>
+	  <list>Two</list>
+	  <list>three</list>
+	</author>
+	<chapter>Introduction to HTML</chapter>
+	<section>
+	  <list></list>
+	</section>
+	<origin>
+	  <file>ICT book</file>
+	  <section>
+		<list></list>
+	  </section>
+	</origin>
+	<language></language>
+  </header>
+  <content>
+      <ind indxnum='1' section='001WBP' title='প্রাথমিক ধারণা'>
+        <ind indxnum='1.0.1' section='002WBP' title='শিখন ফল'></ind>
+      </ind>
+      <ind indxnum='1.1' section='003WBP' title='বিশ্বগ্রামের ধারণা'>
+        <ind indxnum='1.1.0' section='004WBP' title='বিশ্বগ্রামের উপাদানসমূহ'></ind>
+        <ind indxnum='1.1.1' section='005WBP' title='বিশ্বগ্রামে যোগাযোগ ব্যবস্থা'></ind>
+        <ind indxnum='1.1.2' section='006WBP' title='বিশ্বগ্রামে কর্মসংস্থান'></ind>
+      </ind>
+      <ind indxnum='1.2' section='016WBP' title='ভার্চুয়াল রিয়েলিটি'>
+        <ind indxnum='1.2.0' section='017WBP' title='ভার্চুয়াল রিয়েলিটির ব্যবহার'></ind>
+        <ind indxnum='1.2.1' section='018WBP' title='প্রাত্যহিক জীবনে ভার্চুয়াল রিয়েলিট'></ind>
+        <ind indxnum='1.2.2' section='QUSWV2' title='Question Set part Two'></ind>
+      </ind>
+  </content>
+</epbllesson>
