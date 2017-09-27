@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Animation files</title>
+</head>
+<style type="text/css">
+	body {
+		margin: 0;
+		padding: 0;
+		background: rgba(230,245,255,0.5);
+	}
+	h4 {
+		background: rgba(100,80, 0, 0.5);
+		width: 10%;
+		padding: 10px 20px;
+	}
+	.transform1 { /* user -ms- for IE9 and -webkit- for Safari with the css properties*/
+		position: fixed;
+	    transform: rotate(45deg);
+	}
+	.transform2 {
+    	transform: translate(50px, -20px);
+	}
+	.transform3 {
+		transform: scale(-1.0, 3);
+	}
+	.transform4 { /* you also can user skewX, skewY */
+		transform: skew(30deg);
+	}
+	.transform5 { /*  matrix(scaleX(),skewY(),skewX(),scaleY(),translateX(),translateY()) */
+		transform: matrix(1, -0.3, 0, 2, 0, 0);
+	}
+</style>
+<body>
+	<div>
+		<h1>Animation Basics</h1>
+		<h3>Transform</h3>
+		<div>Before we start about css animation we should know about Transform</div>
+		<p>CSS3 transforms allow you to translate, rotate, scale, and skew elements.<br>
+		A transformation is an effect that lets an element change shape, size and position.<br>
+		CSS3 supports 2D and 3D transformations. Lest checkout 2D transform first</p>
+		<h4 class="transform1">Hello 2</h4>
+		<h4 class="">Hello 1</h4>
+
+		<h4 class="transform2">Hello 3</h4>
+		<h4 class="transform3">Hello 4</h4>
+		<h4 class="transform4">Hello 5</h4>
+		<h4 class="transform5">Hello 6</h4>
+	</div>
+</body>
+</html>
