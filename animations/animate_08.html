@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Animation files</title>
+</head>
+<style type="text/css">
+	body {
+		margin: 0;
+		padding: 0;
+		background: rgba(230,245,255,0.5);
+	}
+	body>div {
+		width: 80%;
+		margin: 0 auto;
+	}
+	h3 {
+		padding: 20px;
+		height: 60px;
+		width: 100px;
+	    background-color: red;
+	    position: relative;
+	}
+	.reverse {
+	    animation-name: example;
+	    animation-duration: 4s;
+	    animation-iteration-count: infinite;  
+	    animation-direction: reverse;
+	}
+	.regular {		
+	    animation-name: example;
+	    animation-duration: 4s;
+	    animation-iteration-count: infinite;  
+	}
+	.alternat {		
+	    animation-name: example;
+	    animation-duration: 4s;
+	    animation-iteration-count: infinite;  
+	    animation-direction: alternate;
+	}
+
+	/* Safari 4.0 - 8.0 */
+	@-webkit-keyframes example {
+	    0%   {background-color:red; left:0px; top:0px;}
+	    25%  {background-color:yellow; left:200px; top:0px;}
+	    50%  {background-color:blue; left:200px; top:200px;}
+	    75%  {background-color:green; left:0px; top:200px;}
+	    100% {background-color:red; left:0px; top:0px;}
+	}
+</style>
+<body>
+	<div>
+		<h1>CSS Animations</h1>
+		<p>CSS3 animations allows animation of most HTML elements without using JavaScript or Flash!</p>
+		<p><b>Note:</b> This example does not work in Internet Explorer 9 and earlier versions.</p>
+		<div style="display: flex; flex-wrap: wrap;">
+			<h3 class="reverse">Hello world</h3>
+			<h3 class="alternat">Hello world</h3>
+			<h3 class="regular">Hello world</h3>
+		</div>
+		<div>It is also possible to use percent. By using percent, you can add as many style changes as you like.The following example will change the background-color of the &lt;h3&gt; element when the animation is 25% complete, 50% complete, and again when the animation is 100% complete:</div>
+		<pre>
+	
+	h3 {
+		padding: 20px;
+		height: 60px;
+		width: 100px;
+	    background-color: red;
+	    position: relative;
+	}
+	.reverse {
+	    animation-name: example;
+	    animation-duration: 4s;
+	    animation-iteration-count: infinite;  
+	    animation-direction: reverse;
+	}
+	.regular {		
+	    animation-name: example;
+	    animation-duration: 4s;
+	    animation-iteration-count: infinite;  
+	}
+	.alternat {		
+	    animation-name: example;
+	    animation-duration: 4s;
+	    animation-iteration-count: infinite;  
+	    animation-direction: alternate;
+	}
+
+	/* Safari 4.0 - 8.0 */
+	@-webkit-keyframes example {
+	    0%   {background-color:red; left:0px; top:0px;}
+	    25%  {background-color:yellow; left:200px; top:0px;}
+	    50%  {background-color:blue; left:200px; top:200px;}
+	    75%  {background-color:green; left:0px; top:200px;}
+	    100% {background-color:red; left:0px; top:0px;}
+	}</pre>
+	</div>
+</body>
+</html>

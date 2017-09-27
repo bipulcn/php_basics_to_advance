@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Animation files</title>
+</head>
+<style type="text/css">
+	body {
+		margin: 0;
+		padding: 0;
+		background: rgba(230,245,255,0.5);
+	}
+	body>div {
+		width: 80%;
+		margin: 0 auto;
+	}
+	h3 {
+	    width: 100px;
+	    height: 50px;
+	    padding: 10px;
+	    background-color: orange;
+	    font-weight: bold;
+	    position: relative;
+	    animation: mymove 5s infinite;
+	    animation-direction: alternate;
+	}
+
+	/* Standard syntax */
+	#div1 {animation-timing-function: linear;}
+	#div2 {animation-timing-function: ease;}
+	#div3 {animation-timing-function: ease-in;}
+	#div4 {animation-timing-function: ease-out;}
+	#div5 {animation-timing-function: ease-in-out;}
+
+	/* Standard syntax */
+	@keyframes mymove {
+	    from {left: 0px;}
+	    to {left: 80%;}
+	}
+</style>
+<body>
+	<div>
+		<h1>CSS Animations</h1>
+		<p>CSS3 animations allows animation of most HTML elements without using JavaScript or Flash!</p>
+		<p><b>Note:</b> This example does not work in Internet Explorer 9 and earlier versions.</p>
+		<h3 id="div1">linear</h3>
+		<h3 id="div2">ease</h3>
+		<h3 id="div3">ease-in</h3>
+		<h3 id="div4">ease-out</h3>
+		<h3 id="div5">ease-in-out</h3>
+		<div>It is also possible to use percent. By using percent, you can add as many style changes as you like.The following example will change the background-color of the &lt;h3&gt; element when the animation is 25% complete, 50% complete, and again when the animation is 100% complete:</div>
+		<pre>
+	h3 {
+	    width: 100px;
+	    height: 50px;
+	    padding: 10px;
+	    background-color: orange;
+	    font-weight: bold;
+	    position: relative;
+	    animation: mymove 5s infinite;
+	    animation-direction: alternate;
+	}
+
+	/* Standard syntax */
+	#div1 {animation-timing-function: linear;}
+	#div2 {animation-timing-function: ease;}
+	#div3 {animation-timing-function: ease-in;}
+	#div4 {animation-timing-function: ease-out;}
+	#div5 {animation-timing-function: ease-in-out;}
+
+	/* Standard syntax */
+	@keyframes mymove {
+	    from {left: 0px;}
+	    to {left: 80%;}
+	}</pre>
+	</div>
+</body>
+</html>

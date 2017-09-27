@@ -9,8 +9,26 @@
 		padding: 0;
 		background: rgba(230,245,255,0.5);
 	}
+	body>div {
+		width: 80%;
+		margin: 0 auto;
+	}
+	h4 {		
+	    width: 50px;
+	    height: 100px;
+	    background: yellow;
+	    transition: width 1s, background 3s;
+	}
+	h4:hover {
+		background: skyblue;
+	    width: 200px;
+	}
 </style>
 <body>
-
+	<dir>
+		<h1>Transitions</h1>
+		<p>CSS3 transitions allows you to change property values smoothly (from one value to another), over a given duration.</p>
+		<h4>Hello world</h4>
+	</dir>
 </body>
 </html>

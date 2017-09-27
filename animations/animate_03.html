@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Animation files</title>
+</head>
+<style type="text/css">
+	body {
+		margin: 0;
+		padding: 0;
+		background: rgba(230,245,255,0.5);
+	}
+	body>div {
+		width: 80%;
+		margin: 0 auto;
+	}
+	
+	div {
+	    width: 100px;
+	    height: 100px;
+	    padding: 10px;
+	    background: skyblue;
+	    transition: width 1s, background 1s;
+	}
+
+	/* Standard syntax */
+	#div1 {transition-timing-function: linear;}
+	#div2 {transition-timing-function: ease;}
+	#div3 {transition-timing-function: ease-in;}
+	#div4 {transition-timing-function: ease-out;}
+	#div5 {transition-timing-function: ease-in-out;}
+	div:hover {
+		background: lightgreen;
+	    width: 80%;
+	}
+</style>
+<body>
+	<dir>
+		<h1>Transitions</h1>
+		<p>CSS3 transitions allows you to change property values smoothly (from one value to another), over a given duration.</p>
+		<p><b>Note:</b> This example does not work in Internet Explorer 9 and earlier versions.</p>
+
+		<div id="div1">linear</div><br>
+		<div id="div2">ease</div><br>
+		<div id="div3">ease-in</div><br>
+		<div id="div4">ease-out</div><br>
+		<div id="div5">ease-in-out</div><br>
+
+		<p>Hover over the div elements above, to see the different speed curves.</p>
+	</dir>
+</body>
+</html>
