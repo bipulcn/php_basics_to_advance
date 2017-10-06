@@ -8,14 +8,17 @@
   <body>
     <div class="menu">
 <?php
+echo PHP_OS;
 $dir = getcwd();
-$lp = strripos($dir, '/');
+if(PHP_OS=='WINNT') $lp = strripos($dir, '\\');
+else $lp = strripos($dir, '/');
 $dir= substr($dir, 0, $lp);
 
 createSubList($dir, '..');
 
 function createSubList($addr, $lnk) {
 	echo "<ul>";
+	$version = phpversion();
 	$list = scandir($addr);
 	$files = removeUnimportant($list);
 	foreach ($files as $v) {
