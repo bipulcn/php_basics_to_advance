@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html ng-app="fCheck">
+<head>
+	<title>Filter Practice 2</title>
+	<link rel="stylesheet" type="text/css" href="./css/style.css">
+	<script type="text/javascript" src="./js/angular.min.js"></script>
+	<script type="text/javascript" src="./js/exp_filter4.js"></script>
+</head>
+<body ng-controller="fController">
+<div>
+	<h1>Filter in use</h1>
+	<div ng-init="num=(123|cakPrime:530)">
+		{{3+4}}<br>
+		{{3|cakPrime}}<br>
+		{{123|cakPrime:150}}
+		<div ng-repeat="val in num">{{val}}</div>
+	</div>
+</div>
+</body>
+</html>

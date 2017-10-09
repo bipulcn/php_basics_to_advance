@@ -7,6 +7,7 @@ app.directive('myDomDirective', ['$window', function ($window) {
     return {
         link: function ($scope, element, attrs) {
         	$scope.hellow = "hello world";
+            $scope.height = 0;
             element.bind('click', function () {
                 element.html('You clicked me!');
             });
@@ -17,6 +18,7 @@ app.directive('myDomDirective', ['$window', function ($window) {
                 element.css('background-color', 'white');
             });
             angular.element($window).bind('resize', function(){
+                $scope.height = $window.innerWidth;
             	console.log("hewl "+$window.innerWidth);
 	            element.html('Click Me! '+$window.innerWidth);
 	        });
