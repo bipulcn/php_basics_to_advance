@@ -5,18 +5,25 @@
 	<title>Chartjs Practice</title>
 	<link rel="stylesheet" type="text/css" href="./css/layout.css">
 	<script src="./js/Chart_2.4.0.min.js"></script>
+	<style type="text/css">
+		#myChart {
+			width: 400px; height: 350px;
+		}
+	</style>
 </head>
 <body>
 <div class="f_hold">
 	<div class="f_col_12 col">
 		<h1>Chartjs First intro practice</h1>
 	</div>
-	<div class="f_col_12 col">
+	<div class="f_col_6 col">
 		<canvas id="myChart" width="400" height="400"></canvas>
 	</div>
 </div>
 <script>
 var ctx = document.getElementById('myChart').getContext('2d');
+	ctx.canvas.width = 400;
+	ctx.canvas.height = 400;
 var chart = new Chart(ctx, {
     // The type of chart we want to create
     type: 'line',
@@ -33,7 +40,9 @@ var chart = new Chart(ctx, {
     },
 
     // Configuration options go here
-    options: {}
+    options: {
+        responsive: false
+    }
 });
 
 </script>
