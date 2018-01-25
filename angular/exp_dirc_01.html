@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html ng-app="fCheck">
+<head>
+	<title>Angular Filter test</title>
+	<link rel="stylesheet" type="text/css" href="./css/style.css">
+	<script type="text/javascript" src="./js/angular.min.js"></script>
+	<script type="text/javascript" src="./js/exp_dirc01.js"></script>
+</head>
+<body ng-controller="fController">
+<div>
+	<h1>Directive Check Out</h1>
+	Name: {{customer.name}} 
+	<br />
+	Street: {{customer.street}}
+	<br><br>
+	<div my-shared-scope-and></div>
+
+	<w3-test-directive></w3-test-directive>
+	<div w3-test-directive title='it will show by default'></div>
+	<w3-test-more-directive title="Hover on it, it will show title"></w3-test-more-directive>
+	<div hello-world></div>
+	<div hello:world></div>
+	<div class='hello-world'></div>
+	<br><br><br>
+	<my-dir-name list='todo' title='Is it my title'></my-dir-name>
+	<br><br><br>
+	<div my-sample><div>Its not showing up</div></div>
+	<br><br><br>
+</div>
+</body>
+</html>
