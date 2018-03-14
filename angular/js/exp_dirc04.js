@@ -42,4 +42,5 @@ app.directive("dramaDirective", function(){
             }
         }
     };
+    $scope.testScope = "its a test";
 });

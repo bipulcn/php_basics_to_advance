@@ -20,7 +20,10 @@
         <div><button ng-click='display(drama)'>View Movie</button></div>
 	  	Change drama Title : <input type='text' ng-model='drama'/>
 	  	<hr>
-	    <drama-directive drama='drama' rating="{{rating}}" display="display()"></drama-directive>
+	    <drama-directive drama='drama' rating="{{rating}}"></drama-directive>
+	    <!-- <div ng-click="display()">Click me</div> -->
+	    <button display='click()'>Click me</button>
+	    <div>{{testScope}}</div>
 	</div>
 </body>
 </html>
