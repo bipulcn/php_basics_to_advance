@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JQuery Practice.</title>
+	<link rel="stylesheet" type="text/css" href="./css/layout.css">
+	<script type="text/javascript" src="./js/jquery-3.2.1.min.js"></script>
+	<script type="text/javascript" src="./js/practice_1.js"></script>
+</head>
+<body>
+	<div class="f_hold">
+		<div class="f_col_12 col">
+			<h1>JQuery in example</h1>
+		</div>	
+		<div class="f_col_7 col">
+			<h3>Practice 1</h3>
+			<p>Hello world</p>
+		</div>
+		<div class="f_col_5 col">
+			<h3>Description</h3>
+		</div>
+	</div>
+</body>
+</html>
