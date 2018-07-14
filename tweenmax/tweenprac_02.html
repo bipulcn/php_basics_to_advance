@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Tween Max Animations</title>
+	<link rel="stylesheet" type="text/css" href="./css/layout.css">
+	<!-- <script type="text/javascript" src="./js/jquery.js"></script> -->
+	<script type="text/javascript" src="./js/angular.min.js"></script>
+	<script type="text/javascript" src="./js/TweenMax.min.js"></script>
+	<script type="text/javascript" src="./js/TimelineMax.min.js"></script>
+	<script type="text/javascript">
+		window.onload = function() {
+			var logo = document.getElementById("box");
+
+			var tl = new TimelineMax();
+			tl.to(logo, 1, {left:100}).to(logo, 1, {top:50}).to(logo, 1, {opacity:0});
+		}
+	</script>
+	<style type="text/css">
+		#box {position: fixed; background: orange; width: 100px; height: 75px; padding: 10px;}
+	</style>
+</head>
+<body>
+<dir class="f_hold">
+	<div class="f_col_12 col">
+		<h1>Tween Max Animation Test</h1>
+	</div>
+	<div class="f_col_12 col">
+		<div id="box">This is a box</div>
+	</div>
+</dir>
+</body>
+</html>
