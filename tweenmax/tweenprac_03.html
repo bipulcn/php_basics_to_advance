@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Tween Max Animations</title>
+	<link rel="stylesheet" type="text/css" href="./css/layout.css">
+	<!-- <script type="text/javascript" src="./js/jquery.js"></script> -->
+	<script type="text/javascript" src="./js/angular.min.js"></script>
+	<script type="text/javascript" src="./js/TweenMax.min.js"></script>
+	<script type="text/javascript" src="./js/TimelineMax.min.js"></script>
+	<script type="text/javascript">
+		window.onload = function() {
+			var logo = document.getElementById("box1");
+			var fc = logo.querySelectorAll("div");
+			var tl = new TimelineMax({repeat:-1});
+			var ln = fc.length - 2;
+			console.log(ln);
+			for (var i = ln; i > 0; i--) {
+				tl.to(fc[i], 1, {alpha: 1});
+				tl.to(fc[i], 0.5, {alpha: 0.0});
+			}
+			var logo = document.getElementById("box2");
+			var fc = logo.querySelectorAll("div");
+			var tl2 = new TimelineMax({repeat:-1});
+			var ln2 = fc.length - 2;
+			console.log(ln2);
+			for (var i = ln2; i > 0; i--) {
+				tl2.to(fc[i], 1, {left: 0});
+				tl2.to(fc[i], 0.5, {left: -100+'%', alpha: 0.0});
+			}
+		}
+	</script>
+	<style type="text/css">
+		#box1 { width: 800px; height: 550px; overflow: hidden; }
+		#box1 .imgs { background-size: cover; width: 800px; height: 550px; display: block;position: absolute; }
+		#box1 .text { position: absolute; }
+		#box2 { width: 800px; height: 550px; overflow: hidden; position: absolute; }
+		#box2 .imgs { background-size: cover; width: 800px; height: 550px; display: block;position: absolute; }
+		#box2 .text { position: absolute; padding: 100px; }
+	</style>
+</head>
+<body>
+<dir class="f_hold">
+	<div class="f_col_12 col">
+		<h1>Tween Max Animation Test</h1>
+	</div>
+	<div class="f_col_12 col">
+		<div id="box1">
+			<div class="imgs" style="background: url(./imgs/slider_5.jpg)" ></div>
+			<div class="imgs" style="background: url(./imgs/slider_1.jpg)" ></div>
+			<div class="imgs" style="background: url(./imgs/slider_2.jpg)" ></div>
+			<div class="imgs" style="background: url(./imgs/slider_3.jpg)" ></div>
+			<div class="imgs" style="background: url(./imgs/slider_4.jpg)" ></div>
+			<div class="imgs" style="background: url(./imgs/slider_5.jpg)" ></div>
+			<div class="text">This is a box</div>
+		</div>
+		<div id="box2">
+			<div class="imgs" style="background: url(./imgs/slider_5.jpg)" ></div>
+			<div class="imgs" style="background: url(./imgs/slider_1.jpg)" ></div>
+			<div class="imgs" style="background: url(./imgs/slider_2.jpg)" ></div>
+			<div class="imgs" style="background: url(./imgs/slider_3.jpg)" ></div>
+			<div class="imgs" style="background: url(./imgs/slider_4.jpg)" ></div>
+			<div class="imgs" style="background: url(./imgs/slider_5.jpg)" ></div>
+			<div class="text">This is a box</div>
+		</div>
+	</div>
+</dir>
+</body>
+</html>

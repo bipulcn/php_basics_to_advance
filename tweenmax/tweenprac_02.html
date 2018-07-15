@@ -11,12 +11,16 @@
 		window.onload = function() {
 			var logo = document.getElementById("box");
 
-			var tl = new TimelineMax();
-			tl.to(logo, 1, {left:100}).to(logo, 1, {top:50}).to(logo, 1, {opacity:0});
+			var tl = new TimelineMax({repeat:-1});
+			tl.to(logo, 0.5, {left:200});
+			tl.to(logo, 0.5, {top:250});
+			tl.to(logo, 0.5, {opacity:0});
+			tl.to(logo, 0.25, {opacity:1,left:20});
+			tl.to(logo, 0.5, {top:100});
 		}
 	</script>
 	<style type="text/css">
-		#box {position: fixed; background: orange; width: 100px; height: 75px; padding: 10px;}
+		#box {position: fixed; background: orange; width: 100px; height: 75px; padding: 10px; left: 20; top: 100; }
 	</style>
 </head>
 <body>
