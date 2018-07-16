@@ -9,7 +9,7 @@
 	<script type="text/javascript" src="./js/TimelineMax.min.js"></script>
 	<script type="text/javascript">
 		window.onload = function() {
-			var logo = document.getElementById("box");
+			var logo = document.getElementById("box1");
 			var fc = logo.querySelectorAll("span");
 			var tl = new TimelineMax({repeat:-1});
 			var ln = fc.length - 1;
@@ -18,19 +18,40 @@
 				tl.to(fc[i], 1, {alpha: 1});
 				tl.to(fc[i], 0.5, {alpha: 0.0});
 			}
+			var logo = document.getElementById("box2");
+			var fc = logo.querySelectorAll("span");
+			var tl2 = new TimelineMax({repeat:-1});
+			var ln2 = fc.length - 1;
+			console.log(ln2);
+			for (var i = ln2; i > 0; i--) {
+				tl2.to(fc[i], 1, {left: 0});
+				tl2.to(fc[i], 1.5, {left: -0+'%', 'alpha': 0});
+			}
 		}
 	</script>
 	<style type="text/css">
 		* { text-shadow: none; }
-		#box { width: 99vw; height: 100vh; overflow: hidden; margin-bottom: 30px; }
-		#box .imgs { background-size: cover; width: 99vw; height: 100vh; display: block; position: absolute; }
-		#box .text { position: absolute; padding: 100px; }
+		#box1 { width: 99vw; height: 100vh; overflow: hidden; margin-bottom: 30px; }
+		#box1 .imgs { background-size: cover; width: 99vw; height: 100vh; display: block; position: absolute; }
+		#box1 .text { position: absolute; padding: 100px; }
+		#box2 { width: 99vw; height: 100vh; overflow: hidden; position: absolute; }
+		#box2 .imgs { background-size: 100%; width: 99vw; height: 100vh; display: block;position: absolute; }
+		#box2 .text { position: absolute; padding: 100px; }
 	</style>
 </head>
 <body>
 <dir class="f_hold">
 	<div class="f_col_12">
-		<div id="box">
+		<div id="box1">
+			<span class="imgs" style="background: url(./imgs/slider_5.jpg)" ></span>
+			<span class="imgs" style="background: url(./imgs/slider_1.jpg)" ></span>
+			<span class="imgs" style="background: url(./imgs/slider_2.jpg)" ></span>
+			<span class="imgs" style="background: url(./imgs/slider_3.jpg)" ></span>
+			<span class="imgs" style="background: url(./imgs/slider_4.jpg)" ></span>
+			<span class="imgs" style="background: url(./imgs/slider_5.jpg)" ></span>
+			<div class="text"><h1>Tween Max Animation Test</h1><h3>Lorem ipsum dolor sit amet</h3><div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque auctor id orci sed rhoncus. Morbi vitae suscipit arcu. Aliquam maximus tempor leo nec finibus. Nullam molestie porta dolor a rutrum. Aenean pharetra massa sed arcu facilisis, eget tempor mauris mattis. Proin finibus dictum iaculis. Donec a sem tellus. In gravida elit eu luctus placerat. Etiam pulvinar fringilla erat, varius gravida odio ullamcorper nec. Aenean venenatis, nunc ac ornare dapibus, orci est egestas est, in interdum risus leo sit amet diam. In dictum massa elit, ut facilisis risus bibendum quis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Praesent libero nunc, cursus vitae libero id, laoreet consectetur augue. In lobortis, dolor et vestibulum ultricies, tortor lorem pellentesque libero, ut placerat enim nisi sit amet elit. Mauris at accumsan justo, quis aliquet ex. Sed vitae bibendum tellus.</div></div>
+		</div>
+		<div id="box2">
 			<span class="imgs" style="background: url(./imgs/slider_5.jpg)" ></span>
 			<span class="imgs" style="background: url(./imgs/slider_1.jpg)" ></span>
 			<span class="imgs" style="background: url(./imgs/slider_2.jpg)" ></span>
