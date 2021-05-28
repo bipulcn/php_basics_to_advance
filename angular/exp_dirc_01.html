@@ -3,6 +3,7 @@
 <head>
 	<title>Angular Filter test</title>
 	<link rel="stylesheet" type="text/css" href="./css/style.css">
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 	<script type="text/javascript" src="./js/angular.min.js"></script>
 	<script type="text/javascript" src="./js/exp_dirc01.js"></script>
 </head>
@@ -13,18 +14,27 @@
 	<br />
 	Street: {{customer.street}}
 	<br><br>
+	<h4>{{testVar}}</h4>
+	<br><br>
 	<div my-shared-scope-and></div>
 
 	<w3-test-directive></w3-test-directive>
 	<div w3-test-directive title='it will show by default'></div>
+
+
 	<w3-test-more-directive title="Hover on it, it will show title"></w3-test-more-directive>
+
+
 	<div hello-world></div>
 	<div hello:world></div>
 	<div class='hello-world'></div>
+
 	<br><br><br>
-	<my-dir-name list='todo' title='Is it my title'></my-dir-name>
+	<my-dir-name list='todo' title='Is it my todo list title'></my-dir-name>
 	<br><br><br>
 	<div my-sample><div>Its not showing up</div></div>
+	<br><br><br>
+	<user username="huseyinbabal" avatar="https://www.gravatar.com/avatar/ef36a722788f5d852e2635113b2b6b84?s=128&d=identicon&r=PG" reputation="8012"></user>
 	<br><br><br>
 </div>
 </body>

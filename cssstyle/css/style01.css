@@ -1,0 +1,36 @@
+html, body {margin: 0; padding: 0; font-family: monospace; }
+.clear { clear: both; width: 100%; border: none; }
+.half { width: 47.5%; margin: 1%; border: thin solid #0003; }
+.quater { width: 22.5%; margin: 1%; border: thin solid #0003; }
+.third { width: 30.85%; margin: 1%; border: thin solid #0003; }
+.flex { display: flex; flex-wrap: wrap; flex-grow: 1; }
+.layout1 { flex-direction: row; }
+.layout2 { flex-direction: row-reverse; }
+.layout3 { flex-direction: column; }
+.layout4 { flex-direction: column-reverse; }
+.layout5 { justify-content: center; }
+.layout6 { justify-content: flex-end; }
+.layout7 { justify-content: flex-start;`` }
+.layout8 { justify-content: space-around; }
+.layout9 { justify-content: space-between; }
+.layout10 { justify-content: space-evenly; }
+.layout11 div:nth-child(2) { align-self: flex-end; }
+.layout12 div:nth-child(2) { align-self: flex-start; }
+.layout13 div:nth-child(2) { align-self: baseline; }
+.layout14 div:nth-child(2) { align-self: center; }
+.layout15 div:nth-child(2) { align-self: stretch; }
+.layout16 { align-items: baseline; }
+.layout17 { align-items: stretch; }
+.layout18 { align-items: center; }
+.layout19 { align-items: flex-end; }
+.layout20 { align-items: flex-start; }
+.layout21 {  }
+.layout22 {  }
+
+.col { width: auto; padding: 10px; }
+.exhi { min-height: 100px; }
+
+.red { background: #C6DDC1; }
+.green { background: #FECFB1; }
+.orange { background: #F69175; }
+.blue { background: #3F595A; color: white;  }

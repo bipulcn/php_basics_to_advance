@@ -1,25 +1,28 @@
 var app = angular.module('fCheck', []);
 
-app.controller('fController', ['$scope', function ($scope) {
+app.controller('fController', ['$scope', '$sce', function ($scope, $sce) {
     $scope.todo = [
         {name: 'Create a custom directive', completed: true},
         {name: 'Learn about restrict', completed: true},
         {name: 'Master scopes', completed: false}
       ];
+    $scope.commentText = "This is a comment text";
+    $scope.trustIt = function(itm){
+      return $sce.trustAsHtml(itm);
+    }
 }]);
 
 app.directive('firstDirc', function() {
     return {
-        template: "<h3>First directive STructure</h3>"
+        template: "<h3>First directive Structure</h3>"
     };
 });
 
 app.directive('secondDirc', function() {
     return function(scope, element, attrs) {
         element.bind('click', function(){  //  mouseenter
-            console.log(element.children()[0]);
-            var html ='<div ng-repeat="todo in items">I should not be red</div>';
-            if(element.children()[0]) element.children()[0].replaceWith(html);
+            var html ='<div>I should not be red</div>';
+            element.append(html);
         })
     };
 });
@@ -29,8 +32,8 @@ app.directive('thirdDirc', function() {
         restrict: 'AEC',
         link: function(scope, element, attrs) {
             element.on('click', function(event){
-
-                element.html("Thank you for buying. "+element[0].getValue);
+                let old = element.html();
+                element.html("Thank you for buying. <br>"+old);
                 element.css({color: 'green'});
             });
         }
@@ -42,17 +45,21 @@ app.directive('forthDirc', ['$http', function($http) {
         restrict: 'E',
         scope: { title: '@' },
         link: function(scope, element) {
-            element.on('click', function(){
-                console.log("Hello world");
-                $http({
-                    method:'POST', url: './php/dataload.php', data: {part: 3}
-                }).then(function(data){
-                    console.log(data);
-                    element.html(data['data']);
-                }, function(error){
-                    alert("Error: "+error);
-                })
-            });
+          element.bind('mouseover', function() {
+              element.css({'color': 'orange', 'cursor':'pointer'});
+          });
+          element.bind('mouseout', function() {
+              element.css('color', 'gray');
+          });
+          element.on('click', function(){
+            $http({
+                method:'POST', url: './php/dataload.php', data: {part: 3}
+            }).then(function(data){
+                element.html(data['data']);
+            }, function(error){
+                alert("Error: "+error);
+            })
+          });
         }
     }
 }]);
@@ -60,9 +67,9 @@ app.directive('forthDirc', ['$http', function($http) {
 app.directive('myTag', ['$http', function($http) {
 return {
     restrict: 'ACE',
-    replace: true,     
+    replace: true,
     scope:{
-        src:"@"       
+        src:"@"
     },
     link:function(scope){
         console.info("enter directive controller");
@@ -84,9 +91,9 @@ return {
 app.directive('scopeData', ['$http', function($http) {
     return {
         restrict: 'E',
-        replace: true,     
+        replace: true,
         scope:{
-            src:"@"       
+            src:"@"
         },
         link:function(scope, element){
             element.on('click', function(event){
@@ -103,3 +110,14 @@ app.directive('scopeData', ['$http', function($http) {
         }
     }
 }]);
+
+// #########################
+app.directive("bookComment", function() {
+    return {
+        restrict: 'E',
+        scope: {
+            text: '='
+        },
+        template: '<div ng-bind="text"></div>'
+    }
+})

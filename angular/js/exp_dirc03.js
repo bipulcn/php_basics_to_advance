@@ -17,13 +17,12 @@ app.directive('firstDirc', function() {
 
 app.directive('secondDirc', function() {
     return {
-        scope: {
-            todo: "=",
-            title: '@'
+        scope: true,
+        transclude: true,
+        template: "<div>Test Directives</div><ul><li ng-repeat='td in todo' ng-class='{done:td.completed}'>{{td.name}}</li></ul><div>{{testData}}</div>",
+        link: function(scope, element, attrs) {
+          scope.testData = "Thank you";
         }
-        // link: function(scope, element, attrs) {
-        //     element.html("Thank you");
-        // }
     };
 });
 
@@ -33,7 +32,6 @@ app.directive('thirdDirc', function() {
         scope: { myattrs: '@'},
         link: function(scope, element, attrs) {
             element.on('click', function(event){
-                console.log(element[0]);
                 // angular.forEach(element[0].style, function(value, key){
                 //     console.log(key);
                 //     console.log(value);
