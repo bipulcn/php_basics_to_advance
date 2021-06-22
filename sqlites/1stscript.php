@@ -11,15 +11,16 @@
 // First of all have to install phpX.Y-sqlite
 // sudo apt-get install php7.4-sqlite
 // remove ; from the line of extension for sqlite inside the php.ini file
-	
-$db = new PDO('sqlite::tests.db', null, null, array(PDO::ATTR_PERSISTENT => true));
-// $db->query('CREATE TABLE people (person_id INTEGER PRIMARY KEY AUTOINCREMENT, first_name text NOT NULL, last_name text NOT NULL)');
+
+$db = new PDO('sqlite:tests.db', null, null, array(PDO::ATTR_PERSISTENT => true));
+$db->query('CREATE TABLE IF NOT EXISTS people (person_id INTEGER PRIMARY KEY AUTOINCREMENT, first_name text NOT NULL, last_name text NOT NULL)');
 // $db->query("insert into people (first_name, last_name) values ('Bipul', 'Nath')");
 $statement = $db->query("SELECT * FROM people");
 $row = $statement->fetchAll(PDO::FETCH_ASSOC);
-
-var_dump($row);
-
+foreach ($row as $rw) {
+	var_dump($rw);
+	echo "<br>";
+}
 ?>
 
 </body>
