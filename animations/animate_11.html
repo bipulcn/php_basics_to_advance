@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Animation files</title>
+</head>
+<style type="text/css">
+	body {
+		margin: 0;
+		padding: 0;
+		background: rgba(230,245,255,0.5);
+	}
+	body>div {
+		width: 80%;
+		margin: 0 auto;
+	}
+	.roundborder {
+	    border-radius: 46% 54% 66% 34% / 49% 30% 70% 51% ;
+	    width: 400px;
+	    height: 300px;
+	    background: url('./imgs/back_2.jpeg');
+	    background-size: cover;
+	    animation: borderAnimate 10s infinite alternate-reverse;
+	    animation-timing-function: ease;
+	    border: 5px solid orangered;
+	  }
+	  @keyframes borderAnimate {
+	    0% {
+	      border-radius: 46% 54% 66% 34% / 49% 30% 70% 51% ;
+	    }
+	    33% {
+	      border-radius: 24% 76% 24% 76% / 65% 38% 62% 35%;
+	    }
+	    66% {
+	      border-radius: 33% 67% 69% 31% / 75% 29% 71% 25%;
+	    }
+	    100% {
+	      border-radius: 90% 10% 69% 31% / 65% 8% 92% 35% ;
+	    }
+	  }
+</style>
+<body>
+	<div class="roundborder" ></div>
+</body>
+</html>
