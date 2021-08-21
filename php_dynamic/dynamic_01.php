@@ -8,6 +8,7 @@
     <h1>Simple php use to make a page dynamic. </h1>
     <p>Here we are going to see different message on page refresh.</p>
     <?php
+    
     $ary = ["The most difficult thing is the decision to act, the rest is merely tenacity. The fears are paper tigers. You can do anything you decide to do. You can act to change and control your life; and the procedure, the process is its own reward.",
     "Believe you can and you're halfway there.", "The pessimist complains about the wind; the optimist expects it to change; the realist adjusts the sails.",
     "The future belongs to those who believe in the beauty of their dreams.", "The best and most beautiful things in the world cannot be seen or even touched - they must be felt with the heart.",
