@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+<<<<<<< HEAD
 	<title>Animated Radious</title>
 </head>
 <style type="text/css">
@@ -100,3 +101,78 @@ body {
 </div>
 </body>
 </html>
+=======
+	<title>Animation files</title>
+</head>
+<style type="text/css">
+	body {
+		margin: 0;
+		padding: 0;
+		background: rgba(230,245,255,0.5);
+	}
+	body>div {
+		width: 80%;
+		margin: 0 auto;
+	}
+	.spin-container {
+		animation: spin 12s linear infinite;
+		width: 400px;
+		height: 300px;
+		position: relative;
+	}
+	.roundborder {
+		animation: morph 8s ease-in-out infinite both alternate;
+	  position: absolute;
+	  overflow: hidden;
+	  z-index: 5;
+		width: 400px;
+		height: 300px;
+	}
+	.bd {
+		width: 140%;
+    height: 140%;
+    position: absolute;
+    left: -20%;
+    top: -20%;
+    background: url(./imgs/back_2.jpeg);
+    background-size: cover;
+    background-position: center center;
+    animation: spin 12s linear infinite reverse;
+  }
+		@-webkit-keyframes morph {
+		  0% {
+		    border-radius: 40% 60% 60% 40%/60% 30% 70% 40%;
+		  }
+		  100% {
+		    border-radius: 40% 60%;
+		  }
+		}
+
+		@keyframes morph {
+		  0% {
+		    border-radius: 40% 60% 60% 40%/60% 30% 70% 40%;
+		  }
+		  100% {
+		    border-radius: 40% 60%;
+		  }
+		}
+		@-webkit-keyframes spin {
+		  to {
+		    transform: rotate(1turn);
+		  }
+		}
+		@keyframes spin {
+		  to {
+		    transform: rotate(1turn);
+		  }
+		}
+</style>
+<body>
+	<div class="spin-container">
+		<div class="roundborder" >
+			<div class="bd"></div>
+		</div>
+	</div>
+</body>
+</html>
+>>>>>>> 77e932f6af7188a2918251bf0337a02792a7df5f
