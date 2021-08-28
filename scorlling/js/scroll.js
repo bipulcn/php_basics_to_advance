@@ -18,7 +18,7 @@ function SmoothScroll(target, speed, smooth) {
     let delta = normalizeWheelDelta(e);
     pos += -delta * speed;
     pos = Math.max(0, Math.min(pos, target.scrollHeight - frame.clientHeight)); // limit scrolling
-    console.log(target.scrollHeight, frame.clientHeight);
+    // console.log(target.scrollHeight, frame.clientHeight);
     if (!moving) update();
   }
 
