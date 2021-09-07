@@ -23,17 +23,18 @@ $stid = oci_parse($conn, 'SELECT * FROM employees');
 oci_execute($stid);
 
     // $db = "(DESCRIPTION=(ADDRESS_LIST = (ADDRESS = (PROTOCOL = TCP)(HOST = localhost)(PORT = 1521)))(CONNECT_DATA=(SERVICE_NAME=ORCLCDB.localdomain)))" ;
-    // var_dump($db);
-    // if($c = OCILogon("bipul", "bipul", $db))
-    // {
-    //     echo "Successfully connected to Oracle.\n";
-    //     OCILogoff($c);
-    // }
-    // else
-    // {
-    //     $err = OCIError();
-    //     echo "Connection failed." . $err[text];
-    // }
+    $db = "(DESCRIPTION=(ADDRESS=(PROTOCOL=TCP)(HOST=localhost)(PORT=1521))(CONNECT_DATA=(SERVER=DEDICATED)(SERVICE_NAME=ORCLCDB.localdomain)))";
+    var_dump($db);
+    if($c = OCILogon("bipul", "bipul", $db))
+    {
+        echo "Successfully connected to Oracle.\n";
+        OCILogoff($c);
+    }
+    else
+    {
+        $err = OCIError();
+        echo "Connection failed." . $err[text];
+    }
     echo "nothing shows";
 ?>
 </body>
