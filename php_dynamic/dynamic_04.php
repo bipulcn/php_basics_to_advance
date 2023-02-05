@@ -12,7 +12,7 @@
   <body>
     <h1>Get System font infos.</h1>
     <?php
-    $list = scandir("/Library/Fonts");
+    $list = scandir("/usr/share/fonts");
 
 	$files = removeUnimportant($list);
     // print_r($files);
@@ -25,6 +25,22 @@
 		echo "<div>1 2 3 4 5 6 7 8 9 0<br> \" \' : ; \" \" <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce et fringilla nibh. Ut ut neque molestie, cursus velit id, tempor ante. In eget viverra leo.</p><p>Aliquam urna orci, viverra ut elit eget, ullamcorper malesuada metus. Sed metus quam, imperdiet sed est facilisis, vehicula egestas turpis. Nulla aliquet nulla nec turpis dignissim eleifend. Quisque euismod placerat dictum.</p></div>";
 		echo "</div>";
 	}
+  $it = new RecursiveTreeIterator(new RecursiveDirectoryIterator("/usr/share/fonts", RecursiveDirectoryIterator::SKIP_DOTS));
+  foreach($it as $path) {
+    // echo $path."<br>";
+    // preg_match("/(?:.(?!\/))+$/i", $path, $matches, PREG_OFFSET_CAPTURE);
+    // preg_match("/\./i", $matches[0][0], $dot, PREG_OFFSET_CAPTURE);
+    // if($dot[0][1]!=0){
+    //   $fnt = substr($matches[0][0], 1);
+    //   echo $fnt;
+    // }
+  }
+  $imagick = new Imagick();
+    $fonts = $imagick->queryFonts();
+    foreach($fonts as $font)
+    {
+        echo $font;
+    }
 	?>
 	</div>
 	<?php

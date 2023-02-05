@@ -1,13 +1,22 @@
 <!DOCTYPE html>
+<?php ini_set('display_errors', 1);?>
 <html>
   <head>
     <meta charset="utf-8">
     <title>Person information</title>
   </head>
   <body>
-    <h1>person informations.</h1>
+    <h1>person informations.<div> test data </div></h1>
     <?php
-
+ $inf = '{"one": {"John":20,"Harry":30,"Dave":40,"Tony":50}, "two":{"John":20,"Harry":30,"Dave":40,"Tony":50}}';
+ $job = json_decode($inf);
+ var_dump($job);
+ foreach ($job as $v) {
+   echo '<br>';
+   var_dump($v);
+   var_dump($v->John);
+ }
+ echo "<br><br>";
 $info = array(
   array("name"=>'Ms Adele Worth', 'address'=>'London, Alaska','phone'=>"(559) 463-5804",'dob'=>"February 12, 1970 "),
   array("name"=>'Mr Henderson Chavez', "address"=>'Maunaloa, Northwest Territories', "phone"=>'(867) 176-2822',"dob"=>'December 9, 1948'),
