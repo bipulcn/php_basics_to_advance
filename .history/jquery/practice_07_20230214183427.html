@@ -3,7 +3,7 @@
 <head>
 	<title>JQuery Practice.</title>
 	<link rel="stylesheet" type="text/css" href="./css/layout.css">
-	<script type="text/javascript" src="./js/jquery.min.js"></script>
+	<script type="text/javascript" src="./js/jquery-3.2.1.min.js"></script>
 </head>
 <style type="text/css">
 	#target {
@@ -14,19 +14,14 @@
 <script type="text/javascript">
 	$(document).ready(function(){
 	    $("#btn").click(function(){
-	    	console.log("Work wit the Database.");	    
-	    	var person = {
-	            bod: $("#birthdate").val()
-	        }	
+	    	console.log("On Click it will Call The ajsx to load data from php.");
 	        $.ajax({
             type: 'post',
-            url: './php/phpback_10.php',
-            data: JSON.stringify(person),
+            url: './php/phpback_07.php',
             contentType: "application/json; charset=utf-8",
             traditional: true,
             success: function (data) {
-	        	console.log("Collecting date time from database.");
-	        	console.log(data);
+	        	console.log("This data is from PHP.");
 	            $('#target').html(data);
             }
         });
@@ -38,16 +33,12 @@
 		<div class="f_col_12 col">
 			<h1>JQuery in example</h1>
 		</div>	
-		<div class="f_col_7 col">
-			<h3>Practice 1</h3>
-			Name: <input type="date" name="" id="birthdate">
-			<button id="btn">Add extra Content.</button>
-			<div  id="target" style="display: block; background: orange; width: 500px;" >
-				<h4></h4>
+		<div class="f_col_12 col">
+			<h3>Practice JQuery Ajax 1</h3>
+			<div>This button going to call ajax to retive data from extarnal PHP file will show it on target div.</div>
+			<button id="btn">Add extra Content.</button> 
+			<div  id="target" style="display: block; background: orange;" >
 			</div>
-		</div>
-		<div class="f_col_5 col">
-			<h3>Description</h3>
 		</div>
 	</div>
 </body>

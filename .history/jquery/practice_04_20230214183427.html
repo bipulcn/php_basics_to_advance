@@ -3,15 +3,19 @@
 <head>
 	<title>JQuery Practice.</title>
 	<link rel="stylesheet" type="text/css" href="./css/layout.css">
-	<script type="text/javascript" src="./js/jquery.min.js"></script>
-	<script type="text/javascript" src="./js/practice_2.js"></script>
+	<script type="text/javascript" src="./js/jquery-3.2.1.min.js"></script>
 </head>
+<style type="text/css">
+	#target {
+		padding: 20px 30px;
+	}
+</style>
 <script type="text/javascript">
 	$(document).ready(function(){
-    $("p").click(function(){
-        $(this).testFun();
-    });
-});
+	    $("#btn").click(function(){
+		    $("#target").css("color", "red").slideUp(2000).slideDown(2000); 
+	    });
+	});
 </script>
 <body>
 	<div class="f_hold">
@@ -20,7 +24,8 @@
 		</div>	
 		<div class="f_col_7 col">
 			<h3>Practice 1</h3>
-			<p style="display: block; background: orange;">Hello world</p>
+			<button id="btn">Slide in and Out.</button>
+			<h4 id="target" style="display: block; background: orange;">Hello world</h4>
 		</div>
 		<div class="f_col_5 col">
 			<h3>Description</h3>
