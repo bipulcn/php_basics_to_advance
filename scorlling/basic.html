@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+  <head lang="en">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Magic Scroll</title>
+
+    <style>
+      html, body { padding: 0; margin: 0; }
+      body {
+        font-family: sans-serif;
+        color: #333;
+        font-weight: 100;
+        min-height: 96vh;
+      }
+      #go-move { width: fit-content; }
+      #objone {
+        width: 280px;
+        height: 150px;
+        background: orange;
+        border-radius: 10px;
+        padding: 10px;
+      }
+    </style>
+  </head>
+  <body id="body">
+  <h1 id="go-move">Lorem Ipsum</h1>
+  
+  <div id="objone">Test block</div>
+
+  <script type="text/javascript">
+    const element = document.getElementById('go-move');
+    let start, previousTimeStamp;
+
+    function step(timestamp) {
+      if (start === undefined) start = timestamp;
+      const elapsed = timestamp - start;
+
+      if (previousTimeStamp !== timestamp) {
+        // Math.min() is used here to make sure the element stops at exactly 200px
+        const count = Math.min(0.1 * elapsed, 200);
+        element.style.transform = 'translateX(' + count + 'px)';
+      }
+
+      if (elapsed < 2000) {     // Stop the animation after 2 seconds
+        previousTimeStamp = timestamp
+        window.requestAnimationFrame(step);
+      }
+    }
+    window.requestAnimationFrame(step);
+
+    let elm1 = document.getElementById("objone");
+    elm1.addEventListener('mousemove', dofun);
+    function dofun(e) {
+      console.log(e.x);
+    }
+    let html = document.getElementById("body");
+    html.addEventListener("click", dofun);
+
+  </script>
+</body>
+</html>

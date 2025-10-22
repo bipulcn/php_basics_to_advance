@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Animation files</title>
+</head>
+<style type="text/css">
+	body {
+		margin: 0;
+		padding: 0;
+		background: rgba(230,245,255,0.5);
+	}
+	body>div {
+		width: 80%;
+		margin: 0 auto;
+	}
+
+	.div1 {
+	    width: 100px;
+	    height: 100px;
+	    padding: 10px;
+	    background: red;
+	    transition: width 1s, height 1s, transform 1s;
+	}
+
+	.div1:hover {
+	    width: 300px;
+	    height: 300px;
+	    transform: rotate(180deg);
+	}
+</style>
+<body>
+	<dir>
+		<h1>Transitions</h1>
+		<p>CSS3 transitions allows you to change property values smoothly (from one value to another), over a given duration.</p>
+		<p><b>Note:</b> This example does not work in Internet Explorer 9 and earlier versions.</p>
+
+		<h3 class="div1">linear</h3>
+
+		<p>Hover over the div elements above, to see the different speed curves.</p>
+		<pre>
+	.div1 {
+	    width: 100px;
+	    height: 100px;
+	    padding: 10px;
+	    background: red;
+	    transition: width 1s, height 1s, transform 1s;
+	}
+
+	.div1:hover {
+	    width: 300px;
+	    height: 300px;
+	    transform: rotate(180deg);
+	}</pre>
+	</dir>
+</body>
+</html>

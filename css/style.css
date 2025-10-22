@@ -1,0 +1,95 @@
+html, body {
+	margin: 0;
+	padding: 0;
+	font-family: Helvetica;
+	font-size: 1em;
+	line-height: 1.8em;
+	color: rgba(0,0,0,0.8);
+	background: rgba(0,100,0,0.05);
+}
+h1, h2, h3, h4, h5, h6, p{
+	margin: 0;
+	padding: 0;
+}
+h1 { padding: 15px 0px; text-transform: capitalize; }
+p, div { margin: 5px 0 10px 0; }
+li {
+	/*list-style: none;*/
+}
+a {
+	text-decoration: none;
+	cursor: pointer;
+	color: rgba(70, 149, 240, 0.9);
+}
+.container {
+	background: white;
+	width: 80%;
+	min-height: 90vh;
+	margin: 0 auto;
+	padding: 2.5%;
+	box-shadow: 0px 0px 15px 2px rgba(0,0,0,0.1);
+}
+.note {
+	color: rgba(120, 105, 20, 0.75);
+	background: rgba(40, 40, 60, 0.05);
+	padding: 10px 20px;
+	border-radius: 5px;
+}
+.phpCode, .phpOutput {
+	width: 90%;
+	margin: 0 auto;
+}
+.phpOutput{
+	color: rgba(80, 140, 100, 0.95);
+}
+.phpCode::after {
+	content: "End of Code.";
+	margin-top: 20px;
+	border-top: 1px solid rgba(0,40,20,0.1);
+}
+.phpOutput::before {
+	content: "PHP Output:\A";
+	margin-bottom: 20px;
+	border-bottom: 1px solid rgba(0,40,20,0.1);
+}
+.phpOutput::after {
+	content: "END.";
+	margin-top: 20px;
+	border-top: 1px solid rgba(0,40,20,0.1);
+}
+.phpCode::before {
+	content: "PHP code:\A";
+	margin-bottom: 20px;
+	border-bottom: 1px solid rgba(0,40,20,0.1);
+}
+.phpCode::after, .phpCode::before, .phpOutput::before, .phpOutput::after {
+  white-space: pre;
+	display: block;
+  padding: 5px 8px;
+	margin-left: -5%;
+}
+.note:before {
+  content: "Note: ";
+	color: gray;
+	font-weight: 600;
+}
+[data-label]:before {
+  content: attr(data-label) ": ";
+	color: gray;
+	font-weight: 600;
+}
+
+.menu {
+	float: right;
+	background: rgba(255,255,255,0.9);
+}
+
+.menu ul{padding: 10px 5px 0 10px;}
+.menu li {list-style: none}
+.menu li ul {
+	visibility: hidden;
+  	transition: 0.2s 1s; /* delay of 1 seconds on hover off */
+}
+.menu a:hover{
+	background: orange;
+}

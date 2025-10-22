@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Animation files</title>
+</head>
+<style type="text/css">
+	body {
+		margin: 0;
+		padding: 0;
+		background: rgba(230,245,255,0.5);
+	}
+	body>div {
+		width: 80%;
+		margin: 0 auto;
+	}
+	h3 {
+	    width: 100px;
+	    height: 100px;
+	    padding: 10px;
+	    background-color: red;
+	    animation-name: example;
+	    animation-duration: 4s;
+	}
+
+	/* Standard syntax */
+	@keyframes example {
+	    from {background-color: red;}
+	    to {background-color: yellow;}
+	}
+</style>
+<body>
+	<div>
+		<h1>CSS Animations</h1>
+		<p>CSS3 animations allows animation of most HTML elements without using JavaScript or Flash!</p>
+		<p><b>Note:</b> This example does not work in Internet Explorer 9 and earlier versions.</p>
+		<h3>Hello world</h3>
+		<div>When you specify CSS styles inside the @keyframes rule, the animation will gradually change from the current style to the new style at certain times. To get an animation to work, you must bind the animation to an element. The following example binds the "example" animation to the &lt;h3&gt; element. The animation will last for 4 seconds, and it will gradually change the background-color of the &lt;h3&gt; element from "red" to "yellow":</div>
+		<pre>
+	h3 {
+	    width: 100px;
+	    height: 100px;
+	    padding: 10px;
+	    background-color: red;
+	    animation-name: example;
+	    animation-duration: 4s;
+	}
+
+	/* Standard syntax */
+	@keyframes example {
+	    from {background-color: red;}
+	    to {background-color: yellow;}
+	}</pre>
+	</div>
+</body>
+</html>

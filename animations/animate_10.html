@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Animation files</title>
+</head>
+<style type="text/css">
+	body {
+		margin: 0;
+		padding: 0;
+		background: rgba(230,245,255,0.5);
+	}
+	body>div {
+		width: 80%;
+		margin: 0 auto;
+	}
+	h3{
+	    width: 100px;
+	    height: 100px;
+	    background-color: red;
+	    position: relative;
+	    animation: example 5s linear 2s infinite alternate;
+	}
+
+	/* Standard syntax */
+	@keyframes example {
+	    0%   {background-color:red; left:0px; top:0px;}
+	    25%  {background-color:yellow; left:200px; top:0px;}
+	    50%  {background-color:blue; left:200px; top:200px;}
+	    75%  {background-color:green; left:0px; top:200px;}
+	    100% {background-color:red; left:0px; top:0px;}
+	}
+</style>
+<body>
+	<div>
+		<h1>CSS Animation Shorthand Properties</h1>
+		<p>CSS3 animations allows animation of most HTML elements without using JavaScript or Flash!</p>
+		<p>The example below uses six of the animation properties:</p>
+		<p><b>Note:</b> This example does not work in Internet Explorer 9 and earlier versions.</p>
+		<h3>linear</h3>
+		<div>It is also possible to use percent. By using percent, you can add as many style changes as you like.The following example will change the background-color of the &lt;h3&gt; element when the animation is 25% complete, 50% complete, and again when the animation is 100% complete:</div>
+		<pre>
+	h3{
+	    width: 100px;
+	    height: 100px;
+	    background-color: red;
+	    position: relative;
+	    animation: example 5s linear 2s infinite alternate;
+	}
+
+	/* Standard syntax */
+	@keyframes example {
+	    0%   {background-color:red; left:0px; top:0px;}
+	    25%  {background-color:yellow; left:200px; top:0px;}
+	    50%  {background-color:blue; left:200px; top:200px;}
+	    75%  {background-color:green; left:0px; top:200px;}
+	    100% {background-color:red; left:0px; top:0px;}
+	}</pre>
+	</div>
+</body>
+</html>

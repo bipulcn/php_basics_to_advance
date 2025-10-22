@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Get Directory</title>
+  </head>
+  <style type="text/css">
+  	body { width: 99%; margin: 0; padding: 0 0.5%; }
+  	.f_hold { display: flex; flex-flow: wrap; }
+  	.f_unit { width: 22%; background: rgba(0, 100, 200, 0.2); padding: 2% 1%; margin: 0.5%; }
+  </style>
+  <body>
+    <h1>Get System font infos.</h1>
+    <?php
+    $list = scandir("/usr/share/fonts");
+
+	$files = removeUnimportant($list);
+    // print_r($files);
+	?>
+	<div class="f_hold">
+	<?php
+	foreach ($files as $key => $value) {
+		$v = explode(".", $value);
+		echo "<div class='f_unit' style='font-family:\"".$v[0]."\";'><h2>".$v[0]."</h2>";
+		echo "<div>1 2 3 4 5 6 7 8 9 0<br> \" \' : ; \" \" <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce et fringilla nibh. Ut ut neque molestie, cursus velit id, tempor ante. In eget viverra leo.</p><p>Aliquam urna orci, viverra ut elit eget, ullamcorper malesuada metus. Sed metus quam, imperdiet sed est facilisis, vehicula egestas turpis. Nulla aliquet nulla nec turpis dignissim eleifend. Quisque euismod placerat dictum.</p></div>";
+		echo "</div>";
+	}
+  $it = new RecursiveTreeIterator(new RecursiveDirectoryIterator("/usr/share/fonts", RecursiveDirectoryIterator::SKIP_DOTS));
+  foreach($it as $path) {
+    // echo $path."<br>";
+    // preg_match("/(?:.(?!\/))+$/i", $path, $matches, PREG_OFFSET_CAPTURE);
+    // preg_match("/\./i", $matches[0][0], $dot, PREG_OFFSET_CAPTURE);
+    // if($dot[0][1]!=0){
+    //   $fnt = substr($matches[0][0], 1);
+    //   echo $fnt;
+    // }
+  }
+  $imagick = new Imagick();
+    $fonts = $imagick->queryFonts();
+    foreach($fonts as $font)
+    {
+        echo $font;
+    }
+	?>
+	</div>
+	<?php
+	function removeUnimportant($files) {
+		$ary = ['.', '..', '.git','php','css','.DS_Store'];
+		foreach ($files as $k => $v)
+			if (in_array($v, $ary))
+				unset($files[$k]);
+		return $files;
+	}
+    ?>
+  </body>
+</html>

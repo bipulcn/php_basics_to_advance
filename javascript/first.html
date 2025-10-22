@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Javascript animation</title>
+    <style media="screen">
+      #box {
+          position: absolute;
+          width: 100px;
+          height: 100px;
+          background: blue;
+          top: 50px;
+          left: 0px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="box"></div>
+  </body>
+  <script type="text/javascript">
+    let box = document.getElementById("box");
+    const screenWidth = window.innerWidth;
+    let count = 0;
+    const intervalId = setInterval(function() {
+      console.log(count++);
+      let left = box.offsetLeft;
+      let top = box.offsetTop;
+
+      if (count < 10){
+        left++;
+        box.style.left = left+"px";
+      }
+      else if (count > 10 && count < 20){
+        top++;
+        box.style.top = top+"px";
+      }
+      else if (count > 20 && count < screenWidth) {
+        left++;
+        box.style.left = left+"px";
+      }
+      if(count > screenWidth) {
+        clearInterval(intervalId);
+      }
+    }, 1000);
+  </script>
+</html>

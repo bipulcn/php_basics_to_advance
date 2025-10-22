@@ -1,0 +1,43 @@
+.card {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-top: 100px;
+  height: 250px;
+  width: 400px;
+  margin: 100px auto 0 auto;
+}
+.card span {
+  width: 50%;
+  height: 125px;
+  display: block;
+  filter: blur(50px);
+}
+span:nth-child(4) { background: #F008; }
+span:nth-child(1) { background: #0F08; }
+span:nth-child(2) { background: #00F8; }
+span:nth-child(3) { background: #93F8; }
+
+.card .glass {
+  background: linear-gradient(130deg, #00000005 50%, #00000012 50%);
+  width: 400px;
+  height: 250px;
+  position: absolute;
+  backdrop-filter: blur(100px);
+  border-radius: 10px;
+  box-shadow: 0 0 20px #0002;
+}
+.card .glass div {
+  background: #fff5;
+  padding: 10px 0 20px;
+  margin: 0;
+  border-radius: 0 0 10px 10px;
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+}
+.card .glass h1, .card .glass p {
+  margin: 0;
+  padding: 0 10px;
+}
